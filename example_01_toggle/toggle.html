@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Toggle</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100dvw;
+				height: 100dvh;
+				background: #333;
+				color: #ddd;
+				font-family: sans-serif;
+				font-size: 3rem;
+				font-weight: 500;
+			}
+
+			div {
+				width: 20rem;
+				height: 20rem;
+				outline: 1px solid yellowgreen;
+				background-color: #222;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.highlight {
+				background-color: yellow;
+				color: #333;
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="myDiv"><span>Toggle</span></div>
+
+		<script>
+			// 1. Access Elements
+			const myDiv = document.getElementById("myDiv");
+
+			// 2.1 Add a click event listener
+			myDiv.addEventListener("click", toggleHighlight);
+
+			function toggleHighlight() {
+				// 2.2 Toggle the 'highlight' class
+				myDiv.classList.toggle("highlight");
+			}
+		</script>
+	</body>
+</html>
