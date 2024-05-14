@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>DOM Manipulation Examples</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body
+		class="bg-blue-400 p-10 w-screen h-screen flex flex-col items-center justify-center text-base font-sans text-gray-900"
+	>
+		<div
+			id="container"
+			class="bg-white flex flex-col gap-4 items-center w-4/5 h-full p-6 rounded-md shadow-md"
+		>
+			<h1
+				id="main-heading"
+				class="heading text-4xl my-8 justify-start"
+			>
+				Introduction to the DOM
+			</h1>
+			<p
+				id="content-1"
+				class="content"
+			>
+				The Document Object Model (DOM) is the data representation of the
+				objects that comprise the structure and content of a document on the
+				web.
+			</p>
+			<p
+				id="content-2"
+				class="content"
+			>
+				The DOM is not part of the JavaScript language, but is instead a Web API
+				used to build websites. JavaScript can also be used in other contexts.
+				For example, Node.js runs JavaScript programs on a computer, but
+				provides a different set of APIs, and the DOM API is not a core part of
+				the Node.js runtime.
+			</p>
+			<p
+				id="content-3"
+				class="content"
+			>
+				The document and window objects are the objects whose interfaces you
+				generally use most often in DOM programming. In simple terms, the window
+				object represents something like the browser, and the document object is
+				the root of the document itself. Element inherits from the generic Node
+				interface, and together these two interfaces provide many of the methods
+				and properties you use on individual elements.
+			</p>
+			<button
+				type="button"
+				id="magic-btn"
+				class="btn w-[200px] cursor-pointer mt-4 px-8 py-4 rounded-lg text-white bg-purple-700 font-bold text-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+				onclick="magicBtnClick()"
+			>
+				Magic!! 🧙‍♀️
+			</button>
+      <button type="button"
+				id="reset-btn"
+				class="btn w-[200px]  cursor-pointer mt-4 px-8 py-4 rounded-lg text-white bg-red-400 font-bold text-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+				">Reset</button>
+		</div>
+		<script src="scripts.js"></script>
+	</body>
+</html>
