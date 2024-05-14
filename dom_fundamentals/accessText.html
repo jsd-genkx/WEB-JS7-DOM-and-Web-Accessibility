@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Manipulating Content</title>
+		<style>
+			body {
+				font-family: sans-serif;
+			}
+			.container {
+				width: 80dvw;
+				min-height: 80dvh;
+				margin: 3rem auto;
+				padding: 20px;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				background-color: #333;
+				color: #eee;
+			}
+			.content {
+				margin: 2rem;
+				padding: 2rem;
+				outline: 1px solid red;
+			}
+
+			.innerHTML {
+				background-color: red;
+				outline: 1px solid white;
+			}
+
+			.innerText {
+				background-color: seagreen;
+				outline: 1px solid white;
+			}
+
+			.textContent {
+				background-color: slateblue;
+				outline: 1px solid white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Using innerHTML -->
+			<div class="content innerHTML">
+				<h2>Using innerHTML</h2>
+				<div id="innerHTMLExample">
+          <span style="display:none;">This is a secret message</span>
+				</div>
+        </div>
+			
+			<!-- Using innerText -->
+			<div class="content innerText">
+				<h2>Using innerText</h2>
+				<div id="innerTextExample">
+					<span style="display:none;"">This is another secret message</span>
+				</div>
+			</div>
+
+			<!-- Using textContent -->
+			<div class="content textContent">
+				<h2>Using textContent</h2>
+				<div id="textContentExample">
+					<span style="display:none;">This is just a secret message</span>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Using innerHTML
+			const innerHTMLExample = document.getElementById("innerHTMLExample").innerHTML;
+			console.log("innerHTMLExample: ", innerHTMLExample);
+
+			// Using innerText
+			const innerTextExample = document.getElementById("innerTextExample").innerText;
+			console.log("innerTextExample: ", innerTextExample);
+
+			// Using textContent
+			const textContentExample =
+				document.getElementById("textContentExample").textContent;
+			console.log("textContentExample: ", textContentExample);
+		</script>
+	</body>
+</html>
