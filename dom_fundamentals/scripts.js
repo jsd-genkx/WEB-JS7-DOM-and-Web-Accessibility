@@ -38,8 +38,12 @@ function changeParagraphs() {
 		paragraph.textContent = `This is paragraph ${index + 1}`;
 		paragraph.classList.add("font-bold");
 		paragraph.classList.add("text-2xl");
-		paragraph.classList.add("text-orange-700");
+		paragraph.classList.add("text-white");
+		paragraph.classList.add("bg-blue-500");
 		paragraph.classList.add("py-4");
+		paragraph.classList.add("px-12");
+		paragraph.classList.remove("text-gray-800");
+		paragraph.classList.remove("bg-slate-200");
 	});
 }
 
