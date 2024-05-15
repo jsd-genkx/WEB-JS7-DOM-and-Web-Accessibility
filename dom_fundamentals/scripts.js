@@ -103,18 +103,23 @@ const bgcBtnClick = () => {
 bgcBtnClick();
 
 /* const showBubbling = () => {
+	window.addEventListener("click", function (event) {
+		console.log(`Hi There! This is "window" 🤴 [window]`);
+	});
+
 	const bgcContainerEl = document.querySelector("#bgc-container");
 	bgcContainerEl.addEventListener(
 		"click",
-		function () {
+		function (event) {
 			console.log(`Greeting from #bgc-container 😍 [Parent]`);
 		},
-		true // useCapture: true (Parent --> Child)
+		false // useCapture: true (Parent --> Child)
 	);
 
 	const bgcBtnEl = document.querySelector("#bgc-btn");
-	bgcBtnEl.addEventListener("click", function () {
+	bgcBtnEl.addEventListener("click", function (event) {
 		console.log(`Hello from #bgc-btn 🎨 [Child]`);
+		// event.stopPropagation(); // stop bubbling
 	});
 };
 showBubbling(); */
