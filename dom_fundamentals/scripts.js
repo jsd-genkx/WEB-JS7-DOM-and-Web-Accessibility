@@ -58,7 +58,7 @@ handleMagicBtn(); */
 
 // 2. onClick method
 function magicBtnClick() {
-	const magicBtnEl = document.querySelector("#magic-btn");
+	// const magicBtnEl = document.querySelector("#magic-btn");
 
 	changeHeading();
 
@@ -76,3 +76,45 @@ function resetBtnClick() {
 	resetBtnEl.addEventListener("click", reloadPage);
 }
 resetBtnClick();
+
+// Random color code generating
+const randomColor = () => {
+	return (
+		"#" +
+		Math.floor(Math.random() * 16777215) // 0xFFFFFF
+			.toString(16)
+			.padStart(6, "0")
+			.toUpperCase()
+	);
+};
+
+// handle change background color button
+const setBackgroundColor = () => {
+	let randColor = randomColor();
+	const bgcContainerEl = document.querySelector("#bgc-container");
+	// console.log(randColor);
+	bgcContainerEl.style.backgroundColor = randColor;
+};
+
+const bgcBtnClick = () => {
+	const bgcBtnEl = document.querySelector("#bgc-btn");
+	bgcBtnEl.addEventListener("click", setBackgroundColor);
+};
+bgcBtnClick();
+
+/* const showBubbling = () => {
+	const bgcContainerEl = document.querySelector("#bgc-container");
+	bgcContainerEl.addEventListener(
+		"click",
+		function () {
+			console.log(`Greeting from #bgc-container 😍 [Parent]`);
+		},
+		true // useCapture: true (Parent --> Child)
+	);
+
+	const bgcBtnEl = document.querySelector("#bgc-btn");
+	bgcBtnEl.addEventListener("click", function () {
+		console.log(`Hello from #bgc-btn 🎨 [Child]`);
+	});
+};
+showBubbling(); */
