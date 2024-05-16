@@ -1,3 +1,27 @@
+// Traversing the DOM
+
+const containerDiv = document.querySelector("#container");
+// console.log(containerDiv.nodeType);
+// console.log(containerDiv.nodeName);
+
+// console.log(containerDiv.children);
+
+// const children = containerDiv.childNodes;
+// children.forEach((child) => console.log(child));
+
+const content1 = document.querySelector("#content-1");
+// console.log(content1.parentElement);
+// console.log(content1.parentElement.parentElement);
+
+// console.log(containerDiv.children[0]);
+// console.log(containerDiv.children[1]);
+
+// console.log(content1.nextElementSibling);
+// console.log(content1.previousElementSibling);
+
+// content1.nextElementSibling.innerHTML = "TA-DA 🎉🎉🎉";
+
+/////////////////////////////////
 // DOM Manipulation
 
 // Step 1: Access Elements
