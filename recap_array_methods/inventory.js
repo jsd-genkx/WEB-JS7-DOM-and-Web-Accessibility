@@ -146,6 +146,25 @@ let foundItem = inventory.find((item) => item.id === itemIdToFind);
 
 // Using .find() --> Finding an items that price > 10
 foundItem = inventory.find((item) => item.price > 10.99);
-console.log("Items found by price > 10.99", foundItem);
+// console.log("Items found by price > 10.99", foundItem);
 
-console.log(inventory);
+// Using .filter() --> Filtering items with prices greater than a threshold
+const priceThreshold = 15;
+const expensiveItems = inventory.filter((item) => item.price > priceThreshold);
+// console.log("Expensive items (price > $15):", expensiveItems);
+
+// Using .reduce() --> Calculating total value of all items
+const totalValue = inventory.reduce(
+	(acc, item) => acc + item.price * item.quantity,
+	0
+);
+
+// Formatting the total value as currency
+const formattedTotalValue = new Intl.NumberFormat("en-US", {
+	style: "currency",
+	currency: "USD",
+}).format(totalValue);
+
+console.log("Total value of all items:", formattedTotalValue);
+
+// console.log(inventory);
