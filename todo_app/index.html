@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>To-Do App</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		/>
+	</head>
+	<body class="bg-gray-400 font-sans">
+		<div
+			class="container w-3/5 h-full mx-auto mt-10 p-4 bg-white rounded shadow-lg"
+		>
+			<h1 class="text-2xl font-bold mb-4">To-Do List</h1>
+
+			<div class="mb-4 flex">
+				<input
+					type="text"
+					autocomplete="off"
+					id="task-input"
+					class="border border-gray-300 rounded-l p-2 flex-grow"
+					placeholder="Enter a new task"
+					tabindex="1"
+				/>
+				<button
+					id="add-task-btn"
+					class="bg-blue-600 text-white px-4 rounded-r font-sans font-semibold w-1/8"
+				>
+					<i class="fa-solid fa-plus"></i>
+					&nbsp;&nbsp;Add New Task
+				</button>
+			</div>
+
+			<div class="mb-4 flex">
+				<input
+					type="text"
+					autocomplete="off"
+					id="search-input"
+					class="border border-gray-300 rounded-l p-2 flex-grow"
+					placeholder="Search tasks"
+				/>
+				<button
+					id="search-btn"
+					class="bg-green-600 text-white px-4 rounded-r font-sans font-semibold w-1/8"
+				>
+					<i class="fa-solid fa-magnifying-glass"></i>
+					&nbsp;&nbsp;Search Task
+				</button>
+			</div>
+
+			<ul
+				id="task-list"
+				class="list-none p-0"
+			>
+				<!-- Tasks will be appended here -->
+			</ul>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
