@@ -46,11 +46,18 @@ const students = [
 
 // map: Create an array of student names and IDs
 // Output: An array of student names and IDs
-/* const studentNamesAndIds = students.map((student) => ({
-	id: student.id,
-	name: student.name,
-})); */
-// console.log(studentNamesAndIds);
+// Format: Array.map((item) => ({})); // retuen new array of objects
+const studentNamesAndIds = students.map((student) => {
+	return {
+		id: student.id,
+		name: student.name,
+	};
+});
+console.log(studentNamesAndIds);
+
+/* const array = [1, 2, 3];
+const result = array.map((student) => ({}));
+console.log(result); */
 
 // filter: Create an array of all students from Ravenclaw house
 // Output: An array of students from Ravenclaw
@@ -169,9 +176,9 @@ function findTopStudentFromEachHouse(students) {
 const topStudents = findTopStudentFromEachHouse(students);
 
 // Display the top students
-console.log("Top Students from Each House:");
+/* console.log("Top Students from Each House:");
 topStudents.forEach((student) => {
 	console.log(
 		`${student.name} from ${student.house} with ${student.points} points.`
 	);
-});
+}); */
