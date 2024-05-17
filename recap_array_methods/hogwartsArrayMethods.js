@@ -47,13 +47,13 @@ const students = [
 // map: Create an array of student names and IDs
 // Output: An array of student names and IDs
 // Format: Array.map((item) => ({})); // retuen new array of objects
-const studentNamesAndIds = students.map((student) => {
+/* const studentNamesAndIds = students.map((student) => {
 	return {
 		id: student.id,
 		name: student.name,
 	};
-});
-console.log(studentNamesAndIds);
+}); */
+// console.log(studentNamesAndIds);
 
 /* const array = [1, 2, 3];
 const result = array.map((student) => ({}));
@@ -72,25 +72,30 @@ console.log(result); */
 // Reduce method to calculate total points for each house
 // Output: The total points for each house
 // Function to calculate total points for each house
-/* function calculateHousePoints() {
+function calculateHousePoints() {
 	return students.reduce((acc, student) => {
 		if (!acc[student.house]) {
+			// !obj[key]   // ! === NOT // !true === false
 			acc[student.house] = 0;
+			// console.log(acc);
 		}
+		// console.log(acc);
 		acc[student.house] += student.points;
+		// console.log(acc);
 		return acc;
 	}, {});
 }
 
 // Initial house points calculation
 let housePoints = calculateHousePoints();
-console.log("Initial House Points:", housePoints); */
+console.log("Initial House Points:", housePoints);
 
 /* // Function to add points to a student
 function addPointsToStudent(studentId, points) {
 	const student = students.find((student) => student.id === studentId);
+	// console.log(student);
 	if (student) {
-		student.points += points;
+		student.points += points; // as same as : x = x + points ---> x += points
 		housePoints = calculateHousePoints(); // Recalculate house points
 		console.log(
 			`${points} points added to ${student.name}. Total now: ${student.points}`
@@ -100,19 +105,22 @@ function addPointsToStudent(studentId, points) {
 	}
 } */
 
-/* // Function to remove points from a student
-function removePointsFromStudent(studentId, points) {
-	const student = students.find((student) => student.id === studentId);
-	if (student) {
-		student.points = Math.max(0, student.points - points); // Ensure points don't go negative
-		housePoints = calculateHousePoints(); // Recalculate house points
-		console.log(
-			`${points} points removed from ${student.name}. Total now: ${student.points}`
-		);
-	} else {
-		console.log(`Student with ID ${studentId} not found.`);
-	}
-} */
+// Add 50 points to student ID: 2 <"Hermione Granger">
+// addPointsToStudent(2, 50);
+
+// // Function to remove points from a student
+// function removePointsFromStudent(studentId, points) {
+// 	const student = students.find((student) => student.id === studentId);
+// 	if (student) {
+// 		student.points = Math.max(0, student.points - points); // Ensure points don't go negative
+// 		housePoints = calculateHousePoints(); // Recalculate house points
+// 		console.log(
+// 			`${points} points removed from ${student.name}. Total now: ${student.points}`
+// 		);
+// 	} else {
+// 		console.log(`Student with ID ${studentId} not found.`);
+// 	}
+// }
 
 /* // Function to announce the winning house
 function announceWinningHouse() {
@@ -135,7 +143,7 @@ function announceWinningHouse() {
 
 /////////////////////////////////
 
-/* // Function to find the student with the maximum house points
+// Function to find the student with the maximum house points
 function findStudentWithMaxPoints() {
 	const student = students.reduce(
 		(maxStudent, currentStudent) =>
@@ -148,7 +156,7 @@ function findStudentWithMaxPoints() {
 }
 
 // Find the student with the maximum house points
-findStudentWithMaxPoints(); */
+findStudentWithMaxPoints();
 
 ///////////////////////////////////
 // Array Methods Chaining
