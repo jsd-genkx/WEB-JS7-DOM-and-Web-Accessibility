@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Event Listeners</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body
+  class="bg-slate-700 p-10 w-screen h-screen flex flex-col items-center justify-center text-base font-sans text-gray-900">
+  <div 
+    id="container" 
+    class="bg-white flex flex-col gap-4 items-center w-4/5 h-full p-6 rounded-md shadow-md px-12">
+    <div 
+      id="inline-event-handler" 
+      class="w-full h-1/2 ring ring-teal-700 p-4">
+      	<h2
+				class="heading text-4xl my-8 justify-start font-extrabold text-teal-700"
+			>
+				Inline Event Handlers: onClick
+			</h2>
+      <button 
+        onClick="handleClick()" 
+        class="bg-teal-700 hover:bg-teal-200 text-white hover:text-teal-700 font-bold py-2 px-4 border-b-4 border-teal-400 hover:border-teal-700 rounded"
+        >Click me</button>
+    </div>
+     <div 
+      id="inline-event-handler" 
+      class="w-full h-1/2 ring ring-gray-700 p-4">
+      	<h2
+				class="heading text-4xl my-4 justify-start font-extrabold text-gray-700"
+			>
+				addEventListener()
+			</h2>
+      <button 
+        id="alert-btn"
+        class="bg-gray-700 hover:bg-gray-200 text-white hover:text-gray-700 font-bold py-2 px-4 border-b-4 border-gray-400 hover:border-gray-700 rounded"
+        >Click me</button>
+    </div>
+
+    <script>
+
+      // Inline Event Handlers
+      function handleClick() {
+        alert('Button clicked! -- onClick');
+      }
+
+      // addEventListener() 
+      document.querySelector('#alert-btn').addEventListener('click', function () {
+        alert('Button clicked! -- addEventListener()');
+      });
+
+    </script>
+</body>
+</html>
