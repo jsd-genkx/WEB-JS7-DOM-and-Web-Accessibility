@@ -38,16 +38,16 @@
 		</style>
 	</head>
 	<body>
-		<div id="myDiv"><span>Toggle</span></div>
-		<!-- <div
+		<!-- <div id="myDiv"><span>Toggle</span></div> -->
+		<div
 			id="myDiv2"
 			onClick="handleOnClick()"
 		>
 			<span>Toggle</span>
-		</div> -->
+		</div>
 
 		<script>
-			// 1. Access Elements
+		/* 	// 1. Access Elements
 			const myDiv = document.getElementById("myDiv");
 
 			// 2.1 Add a click event listener
@@ -56,12 +56,12 @@
 			function toggleHighlight() {
 				// 2.2 Toggle the 'highlight' class
 				myDiv.classList.toggle("highlight");
-			}
+			} */
 
 			// handleOnClick function
-			// function handleOnClick() {
-			// 	document.getElementById("myDiv2").classList.toggle("highlight");
-			// }
+			function handleOnClick() {
+				document.getElementById("myDiv2").classList.toggle("highlight");
+			}
 		</script>
 	</body>
 </html>

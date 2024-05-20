@@ -34,7 +34,7 @@
 				</button>
 			</div>
 			<div
-				id="inline-event-handler"
+				id="addEventListener"
 				class="w-full h-1/2 ring ring-gray-700 p-4"
 			>
 				<h2
@@ -57,11 +57,19 @@
 			}
 
 			// addEventListener()
+			// document
+			// 	.querySelector("#alert-btn")
+			// 	.addEventListener("click", function () {
+			// 		alert("Button clicked! -- addEventListener()");
+			// 	});
+
 			document
 				.querySelector("#alert-btn")
-				.addEventListener("click", function () {
-					alert("Button clicked! -- addEventListener()");
-				});
+				.addEventListener("click", clickAlert);
+
+			function clickAlert() {
+				alert("Button clicked! -- addEventListener()");
+			}
 		</script>
 	</body>
 </html>

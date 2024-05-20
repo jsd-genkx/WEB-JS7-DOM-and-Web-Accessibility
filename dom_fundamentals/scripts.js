@@ -47,15 +47,15 @@ function changeHeading() {
 }
 
 function changeParagraphs() {
-	const contentEl = document.getElementsByClassName("content");
+	// const contentEl = document.getElementsByClassName("content");
 	// console.log(contentEl); // HTMLCollection
-	const contents = Array.from(contentEl);
+	// const contents = Array.from(contentEl);
 
 	// const paragraphs = document.getElementsByTagName("p");
 	// console.log(paragraphs); // HTMLCollection
 	// let contents = Array.from(paragraphs);
 
-	// const contents = document.querySelectorAll(".content");
+	const contents = document.querySelectorAll(".content");
 	// console.log(contents); // NodeList
 
 	contents.forEach((paragraph, index) => {
@@ -86,7 +86,7 @@ function magicBtnClick() {
 
 	changeHeading();
 
-	// changeParagraphs();
+	changeParagraphs();
 }
 
 // handle reset button by relaoding page

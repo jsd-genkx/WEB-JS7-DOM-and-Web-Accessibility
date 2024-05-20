@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			buttonContainer.appendChild(deleteBtn);
 
 			taskItem.appendChild(buttonContainer);
+			
 			taskList.appendChild(taskItem);
 		});
 	}
