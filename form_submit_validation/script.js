@@ -10,7 +10,6 @@ document.getElementById("form").addEventListener("submit", function (event) {
 	const errorMessage = document.getElementById("errorMessage");
 
 	// validation
-
 	if (!isImgUrl(imageURL)) {
 		errorMessage.textContent = "Please enter a valid image URL.";
 		return;
@@ -22,6 +21,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
 		return;
 	}
 
+	// create new upload object
 	const newUpload = {
 		id: idCounter++,
 		imageURL: imageURL,
@@ -81,8 +81,8 @@ function updateLikeCounter() {
 	).textContent = `Total Likes: ${totalLikes}`;
 }
 
-// Validating image URLs using regex
+// Validating image URLs using RegEx
 function isImgUrl(imageURL) {
 	const input = new URL(imageURL);
-	return /\.(jpg|jpeg|png|webp|gif)$/.test(input.pathname);
+	return /\.(jpg|jpeg)$/.test(input.pathname);
 }
