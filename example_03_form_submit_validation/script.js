@@ -84,5 +84,6 @@ function updateLikeCounter() {
 // Validating image URLs using RegEx
 function isImgUrl(imageURL) {
 	const input = new URL(imageURL);
-	return /\.(jpg|jpeg)$/.test(input.pathname);
+	// return /\.(jpg|jpeg|png|gif|bmp|tiff|svg|webp)$/.test(input.pathname);
+	return true;
 }
